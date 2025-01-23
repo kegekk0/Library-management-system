@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence
+                                 http://xmlns.jcp.org/xml/ns/persistence/persistence_2_2.xsd"
+             version="2.2">
+
+    <persistence-unit name="pjUni">
+
+        <class>entity.Books</class>
+        <class>entity.Borrowing</class>
+        <class>entity.Copy</class>
+        <class>entity.Librarian</class>
+        <class>entity.Publisher</class>
+        <class>entity.User</class>
+
+        <properties>
+
+            <property name="toplink.jdbc.url" value="jdbc:h2:C:\Users\pieku\Desktop\iosdfgauzheiorau\dbRes"/>
+            <property name="toplink.jdbc.driver" value="org.h2.Driver"/>
+            <property name="hibernate.connection.url" value="jdbc:h2:C:\Users\pieku\Desktop\iosdfgauzheiorau\dbRes"/>
+            <property name="hibernate.connection.driver_class" value="org.h2.Driver"/>
+            <property name="openjpa.ConnectionURL" value="jdbc:h2:C:\Users\pieku\Desktop\iosdfgauzheiorau\dbRes"/>
+            <property name="openjpa.ConnectionDriverName" value="org.h2.Driver"/>
+            <property name="eclipselink.jdbc.url" value="jdbc:h2:C:\Users\pieku\Desktop\iosdfgauzheiorau\dbRes"/>
+            <property name="eclipselink.jdbc.driver" value="org.h2.Driver"/>
+
+            <property name="hibernate.dialect" value="org.hibernate.dialect.H2Dialect"/>
+
+        </properties>
+
+    </persistence-unit>
+
+    <persistence-unit name="testUnit">
+
+        <class>entity.Books</class>
+        <class>entity.Borrowing</class>
+        <class>entity.Copy</class>
+        <class>entity.Librarian</class>
+        <class>entity.Publisher</class>
+        <class>entity.User</class>
+
+        <properties>
+            <property name="javax.persistence.jdbc.driver" value="org.h2.Driver" />
+            <property name="javax.persistence.jdbc.url" value="jdbc:h2:mem:testdbRes" />
+            <property name="hibernate.dialect" value="org.hibernate.dialect.H2Dialect" />
+            <property name="hibernate.hbm2ddl.auto" value="create-drop" />
+            <property name="hibernate.show_sql" value="true" />
+        </properties>
+
+    </persistence-unit>
+
+</persistence>
